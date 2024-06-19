@@ -1,0 +1,24 @@
+@media print {
+  /* Hide pagination controls and print button */
+  .pagination-buttons, .no-print {
+    display: none;
+  }
+
+  /* Ensure borders are visible when printing */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 10px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+
+  /* Add vertical lines between columns */
+  th:nth-child(n+2),
+  td:nth-child(n+2) {
+    border-left: 10px solid black;
+  }
+}

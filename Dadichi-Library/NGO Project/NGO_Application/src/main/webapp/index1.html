@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>दधीचि</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+ .form1{
+            background-color: lavender;
+        }
+        
+        .details{
+          margin-top: 2px;
+          padding: 10px;
+          margin-left: 20px;
+          margin-right: 20px;
+    }
+</style>
+</head>
+<body>
+
+<div id="nav-placeholder"></div>
+<script src="//code.jquery.com/jquery.min.js"></script>
+<script>
+$.get("navbar1.html", function(data){
+    $("#nav-placeholder").replaceWith(data);
+});
+</script>
+ <div class="form1">
+<form action="in" method="post" id="myForm" onsubmit="return validateForm()">
+        <div class="details">
+        <h3> वैयक्तिक माहिती:</h3>
+        <div class="form-row ">
+            <div class="form-group col-md-4">
+                <label for="inputFname">पहिले नाव</label>
+                <input type="text" class="form-control" id="inputFname" placeholder="पहिले नाव" name="fn" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputMname">मधले नाव</label>
+                <input type="text" class="form-control" id="inputMname" placeholder="मधले नाव" name="mn" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputLname">आडनाव</label>
+                <input type="text" class="form-control" id="inputLname" placeholder="आडनाव" name="ln" required>
+            </div>
+        </div>
+        <br>
+        
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputMob">मोबाईल क्र.</label>
+                <input type="text" class="form-control" id="inputMob" placeholder="मोबाईल क्र" name="mb" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputDOB">जन्मतारीख</label>
+                <input type="date" class="form-control" id="inputDOB" name="db" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputEl">ईमेल</label>
+                <input type="text" class="form-control" id="inputEl" placeholder="ईमेल" name="eml" required>
+            </div>
+        </div>
+        </div>
+        <br>
+         <div class="details">
+        <div class="form-group">
+            <label for="inputAddress">पत्ता</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="पत्ता" name="ad" required>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputCity">शहर</label>
+                <input type="text" class="form-control" id="inputCity" name="ct" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">राज्य</label>
+                <select class="form-control" id="inputState"  name="st" required>
+                <option>----राज्य निवडा----</option>
+            <option value="AP">आंध्र प्रदेश</option>
+            <option value="AR">अरुणाचल प्रदेश</option>
+            <option value="AS">आसाम</option>
+            <option value="BR">बिहार</option>
+            <option value="CT">छत्तीसगड</option>
+            <option value="GA">गुजरात</option>
+            <option value="HR">हरियाणा</option>
+            <option value="HP">हिमाचल प्रदेश</option>
+            <option value="JK">जम्मू आणि काश्मीर</option>
+            <option value="GA">गोवा</option>
+            <option value="JH">झारखंड</option>
+            <option value="KA">कर्नाटक</option>
+            <option value="KL">केरळा</option>
+            <option value="MP" >मध्य प्रदेश</option>
+            <option value="MH">महाराष्ट्र</option>
+            <option value="MN">मणिपूर</option>
+            <option value="ML">मेघालय</option>
+            <option value="MZ">मिझोराम</option>
+            <option value="NL">नागालँड</option>
+            <option value="OR">ओडिशा</option>
+            <option value="PB">पंजाब</option>
+            <option value="RJ">राजस्थान</option>
+            <option value="SK">सिक्कीम</option>
+            <option value="TN">तामिळनाडू</option>
+            <option value="TG">तेलंगणा</option>
+            <option value="TR">त्रिपुरा</option>
+            <option value="UT">उत्तराखंड</option>
+            <option value="UP">उत्तर प्रदेश</option>
+            <option value="WB">पश्चिम बंगाल</option>
+            <option value="AN">अंदमान आणि निकोबार बेटे</option>
+            <option value="CH">चंदीगड</option>
+            <option value="DN">दादरा आणि नगर हवेली</option>
+            <option value="DD">दमण आणि दीव</option>
+            <option value="DL">दिल्ली</option>
+            <option value="LD">लक्षद्वीप</option>
+            <option value="PY">पुद्दुचेरी</option>
+          </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputZip">पिन</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="पिन" name="pn" required>
+            </div>
+        </div>
+        </div>
+
+<br>
+        
+ <div class="details">
+ <h3> नातेवाईक तपशील:</h3>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="relativename">नातेवाईकांचे  नाव</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="नातेवाईक नाव" name="rn" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputMob">मोबाईल क्र.</label>
+                <input type="text" class="form-control" id="inputMob" placeholder="मोबाईल क्र." name="rmb" required>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputRelation">संबंध </label>
+                <input type="text" class="form-control" id="inputRelation" placeholder="संबंध" name="rrs" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputAdd">नातेवाईकांचे  पत्ता</label>
+                <input type="text" class="form-control" id="inputAdd" placeholder="नातेवाईक पत्ता" name="rad" required>
+            </div>
+        </div>
+        </div>
+
+    <br>    
+    <div class="details">
+    <h3> हॉस्पिटल तपशील:</h3>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputHos">हॉस्पिटलचे नाव</label>
+                <input type="text" class="form-control" id="inputHos" placeholder="हॉस्पिटलचे नाव" name="hn" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputReg">नाॊंदणी क्रमांक</label>
+                <input type="text" class="form-control" id="inputReg" placeholder="नाॊंदणी क्रमांक" name="rgn">
+            </div>
+        </div>
+        </div>
+
+    <br>   
+        <div class="row justify-content-center">
+        <button type="submit" class="btn btn-primary">सबमिट</button>
+        </div>
+    </form>
+    </div>
+<script>
+function validateForm() {
+    // Validation for Mobile Number (10 digits)
+    var mobileNumber = document.getElementById("inputMob").value;
+    if (mobileNumber.length !== 10 || isNaN(mobileNumber)) {
+        alert("Mobile Number must be a 10-digit number.");
+        return false;
+    }
+
+    // Validation for Email (must contain @)
+    var email = document.getElementById("inputEl").value;
+    if (!email.includes("@")) {
+        alert("Invalid Email. Please include '@' in your email.");
+        return false;
+    }
+
+    // Validation for Date of Birth (not tomorrow's date and within a reasonable range)
+    var dob = new Date(document.getElementById("inputDOB").value);
+    var currentDate = new Date();
+    var minDate = new Date("1900-01-01"); // Change this to your desired minimum date
+
+    if (dob >= currentDate || dob <= minDate) {
+        alert("Date of Birth must be a valid date within a reasonable range.");
+        return false;
+    }
+
+    return true; // Form submission proceeds if all validations pass
+}
+
+</script>   
+</body>
+</html>
